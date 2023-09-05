@@ -1,0 +1,158 @@
+@use 'variables';
+@import'breakpoints';
+.fourth-section {
+    display: flex;
+    padding-top: 65px;
+    padding-bottom: 65px;
+    gap: 100px;
+    width: 100%;
+    @include xxl-breakpoint{
+        justify-content: space-between;
+    }
+    @include l-breakpoint {
+        flex-direction: column;
+    }
+    @include s-breakpoint {
+        flex-direction: row;
+        gap: 53px;
+
+    }
+    .image-box{
+        width: 50%;
+        position: relative;
+        z-index: 2;
+        @include xxl-breakpoint {
+            width: 40%;
+            @include xl-breakpoint{
+               width:45%;
+            }
+        }
+        img{
+            height: 545px;
+            width: 563px;
+            @include xxl-breakpoint{
+                width: 100%;
+            }
+            @include m-breakpoint{
+                height: 500px;
+                width: 456px;
+            
+            }
+            @include s-breakpoint {
+                height: 277px;
+                width: 286px;
+                margin-left: -289px;
+
+            }
+            
+            
+            
+           
+        }
+        .orange-box{
+            width: 546px;
+            height: 561px;
+            position: absolute;
+            background-image: linear-gradient(rgba(239, 128, 49, 0),rgba(239, 128, 49, 0.15));
+            top: 44px;
+            left: 77px;
+            z-index: 1;
+            @include xxl-breakpoint {
+                width: 435px;
+            }
+            @include xl-breakpoint{
+                width: 358px;
+            }
+            @include m-breakpoint{
+                width:  423px;
+                height: 498px;
+            }
+            @include s-breakpoint {
+                width: 277px;
+                height: 285px;
+                left: -248px;
+            }
+            
+        }
+
+    }
+    .text-box{
+        width: 50%;
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+        gap: 24px;
+        @include xxl-breakpoint {
+            width: 40%;
+        }
+        @include m-breakpoint{
+            width: 100%;
+        }
+        @include s-breakpoint {
+                
+        }
+        
+        span {
+            color: variables.$yellow-color;
+            font-size: 24px;
+            text-transform: uppercase;
+            @include s-breakpoint {
+                font-size: 13px;
+            }
+            
+        }
+        h2 {
+            font-size: 41px;
+            color: variables.$button-background;
+            text-transform: uppercase;
+            @include s-breakpoint {
+                font-size: 20px;
+            }
+            
+        }
+        p {
+            font-size: 16px;
+            @include s-breakpoint {
+                font-size: 8px;
+            }
+            
+        }
+        .button{
+            background-color: variables.$button-background;
+            border-radius: 5px;
+            width: 80%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-right: 30px;
+            background-image: linear-gradient(30deg, rgba(100, 123, 100, 1),rgba(102, 172, 102, 1));
+            button {
+                background-color: variables.$button-background;
+                color: white;
+                border: none;
+                padding: 20px;
+                font-size: 16px;
+                background-image: linear-gradient(30deg, rgba(100, 123, 100, 1),rgba(102, 172, 102, 1));
+                width: 100%;
+                text-transform: uppercase;
+                font-family: 'Montserrat';
+                @include s-breakpoint {
+                    font-size: 10px;
+                    padding: 13px;
+                }
+                
+            }
+            img {
+                @include s-breakpoint {
+                    width: 12px;
+                    height: 8px;
+                }
+                
+            }
+        }
+
+
+    }
+}
+    
+

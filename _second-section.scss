@@ -1,0 +1,494 @@
+@use 'variables';
+@import'breakpoints';
+.second-section {
+    display: flex;
+    padding-top: 65px;
+    padding-bottom: 65px;
+    gap: 100px;
+    width: 100%;
+    
+    @include xxl-breakpoint {
+        gap: 60px;
+    }
+    @include l-breakpoint {
+        flex-direction: column;
+        justify-content: center;
+    }
+    .main-text-box {
+        display: flex;
+        flex-direction: column;
+        width: 40%;
+        gap: 22px;
+        @include l-breakpoint {
+            margin: auto;
+        }
+        @include m-breakpoint{
+            margin: 0;
+            width: 100%;
+        }
+        @include s-breakpoint {
+            width: 80%;
+            margin-top: 75px;
+            gap: 15px;
+        }
+        &:hover {
+            .header {
+                background-image: linear-gradient(rgba(75, 34, 5, 0.25),rgba(57, 30, 11, 0.15),rgba(239, 128, 49, 0));
+                transition: all 0.5s ease-out;
+                margin-left: -140px;
+            
+            }
+            span {
+                padding-left: 85px;
+            }
+            h2 {
+                padding-left: 85px;
+            }
+        }
+        .header{
+            display: flex;
+            flex-direction: column;
+
+            padding: 40px 56px 18px 0px;
+            gap: 17px;
+            @include s-breakpoint{
+                gap: 5px;
+            }
+            
+            span {
+                color: variables.$yellow-color;
+                font-size: 24px;
+                text-transform: uppercase;
+                @include s-breakpoint {
+                    font-size: 13px;
+                }
+            }
+            h2 {
+                color: variables.$button-background;
+                font-size: 41px;
+                text-transform: uppercase;
+                margin: 0;
+                @include s-breakpoint {
+                    font-size: 20px;
+                }
+
+            }
+        }    
+        p {
+            color: variables.$text-color;
+            font-size: 16px;
+            @include s-breakpoint {
+                font-size: 10px;
+            }
+        }
+        .button{
+            background-color: variables.$button-background;
+            border-radius: 5px;
+            width: 80%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-right: 30px;
+            background-image: linear-gradient(30deg, rgba(100, 123, 100, 1),rgba(102, 172, 102, 1));
+            button {
+                background-color: variables.$button-background;
+                color: white;
+                border: none;
+                padding: 20px;
+                font-size: 16px;
+                background-image: linear-gradient(30deg, rgba(100, 123, 100, 1),rgba(102, 172, 102, 1));
+                width: 100%;
+                text-transform: uppercase;
+                font-family: 'Montserrat';
+                @include s-breakpoint {
+                    font-size: 10px;
+                    padding: 13px;
+                }
+                img {
+                    @include s-breakpoint {
+                        width: 11px;
+                        height: 7px;
+                    }
+                }
+            }
+        }
+    }
+    .options {
+        display: flex;
+        flex-wrap: wrap;
+        width: 50%;
+        gap: 54px;
+        @include xxl-breakpoint{
+            gap: 27px;
+        }
+        @include l-breakpoint {
+            justify-content: center;
+            width: 100%;
+        }
+        @include m-breakpoint {
+            justify-content: center;
+        }
+        @include s-breakpoint {
+            flex-direction: row;
+            justify-content: center;
+        }
+        .car-rental {
+            display: flex;
+            flex-direction: column;
+            width: 30%;
+            border-radius: 3px;
+            padding: 40px;
+            @include xxl-breakpoint {
+                width: 25%;
+            }
+            @include m-breakpoint {
+                justify-content: center;
+                gap: 30px;
+                width: 80%;
+            }
+            @include s-breakpoint{
+                width: 30%;
+                padding: 0;
+                justify-content: start;
+            }
+            .car-rental-img{
+                
+                background-color: white;
+                width: 48px;
+                height: 48px;
+                border-radius: 6px;
+                padding: 10px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                @include m-breakpoint{
+                    margin: auto;
+                }
+                @include s-breakpoint {
+                    width: 25px;
+                    height: 25px;
+                    justify-content: start;
+                    margin: 0;
+                }
+                img {
+                    height: 28px;
+                    width: 28px;
+                    @include s-breakpoint {
+                        width: 15px;
+                        height: 15px;
+                        
+                    }
+                }
+                .car-back {
+                    display: none;
+                }
+            }
+            &:hover{
+                background-color: white;
+                transition: ease-in-out 0.5s;
+                .car-rental-img{
+                    background-color: variables.$button-background;
+                    transition: ease-in-out 0.5s;
+                
+                    img {
+                        display: none;
+                        transition: ease-in-out 0.5s;
+                    }
+                    .car-back {
+                        display: inline;
+                        transition: ease-in-out 0.5s;
+                    }   
+                }
+            }      
+            h3 {
+                font-size: 24px;
+                @include m-breakpoint{
+                    margin: auto;
+                }
+                @include s-breakpoint {
+                    font-size: 12px;
+                }
+            }
+            p {
+                font-size: 13px;
+                @include m-breakpoint{
+                    margin: auto;
+                }
+                @include s-breakpoint {
+                    font-size: 8px;
+                }
+            }
+        }
+        .boat-cruise {
+            display: flex;
+            flex-direction: column;
+            width: 30%;
+            border-radius: 3px;
+            padding: 40px;
+            @include xxl-breakpoint {
+                width: 25%;
+            }
+            @include m-breakpoint {
+                justify-content: center;
+                gap: 30px;
+                width: 80%;
+            }
+            @include s-breakpoint {
+                
+                    width: 30%;
+                    padding: 0;
+                    justify-content: start;
+                
+            }
+            .boat-cruise-img {
+                padding: 10px;
+                background-color: white;
+                width: 48px;
+                height: 48px;
+                border-radius: 6px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                @include m-breakpoint{
+                    margin: auto;
+                }
+                @include s-breakpoint {
+                    width: 25px;
+                    height: 25px;
+                    justify-content: start;
+                    margin: 0;
+                }
+                img {
+                    height: 28px;
+                    width: 28px;
+                    @include s-breakpoint{
+                        width: 15px;
+                        height: 15px;
+                    }
+                }
+                .boat-white {
+                    display: none;
+                    @include s-breakpoint{
+                        width: 15px;
+                        height: 15px;
+                    }
+                }  
+            }
+            &:hover{
+                background-color: white;
+                transition: ease-in-out 0.5s;
+                .boat-cruise-img{
+                    background-color: variables.$button-background;
+                    transition: ease-in-out 0.5s;
+                
+                    img {
+                        display: none;
+                        transition: ease-in-out 0.5s;
+                    }
+                    .boat-white {
+                        display: inline;
+                        transition: ease-in-out 0.5s;
+                    }   
+                }
+            }
+            h3 {
+                font-size: 24px;
+                @include m-breakpoint{
+                    margin: auto;
+                }
+                @include s-breakpoint {
+                    font-size: 12px;
+                }
+            }
+            p {
+                font-size: 13px;
+                @include m-breakpoint{
+                    margin: auto;
+                }
+                @include s-breakpoint {
+                    font-size: 8px;
+                }
+            }
+        }
+        .bus-trip {
+            display: flex;
+            flex-direction: column;
+            width: 30%;        
+            border-radius: 3px;
+            padding: 40px;
+            @include xxl-breakpoint{
+                width: 25%;
+            }
+            @include m-breakpoint {
+                justify-content: center;
+                gap: 30px;
+                width: 80%;
+            }
+            @include s-breakpoint {
+                width: 30%;
+                padding: 0px;
+                
+            }
+            .bus-trip-img{
+                padding: 10px;
+                background-color: white;
+                width: 48px;
+                height: 48px;
+                border-radius: 6px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                @include m-breakpoint{
+                    margin: auto;
+                }
+                @include s-breakpoint {
+                    width: 25px;
+                    height: 25px;
+                    justify-content: start;
+                    margin: 0;
+                }
+                img {
+                    height: 28px;
+                    width: 28px;
+                    @include s-breakpoint {
+                        width: 15px;
+                        height: 15px;
+                    }
+                }
+                .bus-white{
+                    display: none;
+                    @include s-breakpoint {
+                        width: 15px;
+                        height: 15px;
+                    }
+                }
+            }
+            &:hover{
+                background-color: white;
+                transition: 0.5s ;
+                .bus-trip-img{
+                    background-color: variables.$button-background;
+                    transition:  0.5s ease-out;
+                    
+                
+                    img {
+                        display: none;
+                        transition:  0.5s ease-out;
+                    }
+                    .bus-white {
+                        display: inline;
+                        transition:  0.5s ease-out;
+                    }   
+                }
+            }
+            h3 {
+                font-size: 24px;
+                @include m-breakpoint{
+                    margin: auto;
+                }
+                @include s-breakpoint {
+                    font-size: 12px;
+                }
+            }
+            p {
+                font-size: 13px;
+                @include m-breakpoint{
+                    margin: auto;
+                }
+                @include s-breakpoint {
+                    font-size: 8px;
+                }
+            }   
+        }
+        .road-trip {
+            display: flex;
+            flex-direction: column;
+            width: 30%;
+            border-radius: 3px;
+            padding: 40px;
+            @include xxl-breakpoint{
+                width: 25%;
+            }
+            @include m-breakpoint {
+                justify-content: center;
+                gap: 30px;
+                width: 80%;
+            }
+            @include s-breakpoint {
+                width: 30%;
+                padding: 0px;
+                justify-content: start;
+            }
+            .road-trip-img{
+                padding: 10px;
+                background-color: white;
+                width: 48px;
+                height: 48px;
+                border-radius: 6px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                @include m-breakpoint{
+                    margin: auto;
+                }
+                @include s-breakpoint{
+                    width: 25px;
+                    height: 25px;
+                    justify-content: start;
+                    margin: 0;
+                }
+                img {
+                    height: 28px;
+                    width: 28px;
+                    @include s-breakpoint {
+                        height: 15px;
+                        width: 15px;
+                    }
+                }
+                .driving-white{
+                    display: none;
+                    @include s-breakpoint {
+                        height: 15px;
+                        width: 15px;
+                    }
+                }
+            }
+            &:hover{
+                background-color: white;
+                transition: ease-in-out 0.5s;
+                .road-trip-img{
+                    background-color: variables.$button-background;
+                    transition: ease-in-out 0.5s;
+                
+                    img {
+                        display: none;
+                        transition: ease-in-out 0.5s;
+                    }
+                    .driving-white {
+                        display: inline;
+                        transition: ease-in-out 0.5s;
+                    }   
+                }
+            }
+            h3 {
+                font-size: 24px;
+                @include m-breakpoint{
+                    margin: auto;
+                }
+                @include s-breakpoint{
+                    font-size: 12px;
+                }
+            }
+            
+            p {
+                font-size: 13px;
+                @include m-breakpoint{
+                    margin: auto;
+                }
+                @include s-breakpoint {
+                    font-size: 8px;
+                }
+            }   
+        }
+    }
+}

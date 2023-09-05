@@ -1,0 +1,68 @@
+@import'breakpoints';
+.header {
+    display: flex;
+    justify-content: space-between;
+    @include m-breakpoint {
+        flex-direction: column;
+        gap: 25px;
+    }
+    @include s-breakpoint {
+        flex-direction: row;
+    }
+}
+.logo-site {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+    @include m-breakpoint{
+        justify-content: center;
+    }
+    @include s-breakpoint {
+        height: 33px;
+    }
+     img{
+        height: 50px;
+        align-self: center;
+        @include s-breakpoint {
+                height: 33px;
+        }
+    }
+     h2 {
+        color: rgba(100, 123, 100, 1);
+        @include l-breakpoint {
+            font-size: 18px;
+        }
+        @include s-breakpoint{
+            font-size: 13px;
+            text-transform: uppercase;
+        }
+    }
+}
+.navigation-bar {
+     ul {
+    display:flex;
+    gap: 48px;
+    align-items: center;
+    @include l-breakpoint {
+        gap: 24px;
+    }
+ 
+    }
+    li {
+        list-style: none;
+        @include s-breakpoint{
+            display: none;
+        }
+        a{
+        color: rgba(51, 51, 51, 1);
+        text-decoration: none;
+        }
+        button {
+            background-image: linear-gradient(30deg, rgba(100, 123, 100, 1),rgba(102, 172, 102, 1));
+            border-radius: 3px;
+            padding: 8px;
+            color: rgba(254, 254, 254, 1);
+            border: none;
+        }
+    }
+    }

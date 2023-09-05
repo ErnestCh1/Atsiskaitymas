@@ -1,0 +1,25 @@
+@import 'breakpoints';
+
+.container{
+    
+    @media screen {max-width: 1440px;};
+    font-family: 'Montserrat';
+    background-color: rgb(245, 230, 203);
+
+    
+    
+    
+.all-sections {
+    padding: 50px 140px;
+    
+    @include xl-breakpoint {
+        padding: 50px 90px;
+    }
+    @include l-breakpoint {
+        padding: 50px 60px;
+    }
+    @include s-breakpoint{
+        padding: 32px;
+    }
+}
+}

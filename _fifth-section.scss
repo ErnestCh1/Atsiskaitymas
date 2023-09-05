@@ -1,0 +1,211 @@
+@use 'variables';
+@import'breakpoints';
+.fifth-section{
+    display: flex;
+    flex-direction: column;
+    padding-top: 65px;
+    padding-bottom: 65px;
+    width: 100%;
+
+    .section-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        .header{
+            display: flex;
+            flex-direction: column;
+            gap: 17px;
+            span {
+                color: variables.$yellow-color;
+                font-size: 24px;
+                text-transform: uppercase;
+                @include m-breakpoint {
+                    font-size: 18px;
+                }
+                @include s-breakpoint {
+                    font-size: 13px;
+                }
+            }
+            h3 {
+                font-size: 41px;
+                color: variables.$button-background;
+                text-transform: uppercase;
+                @include m-breakpoint{
+                    font-size: 24px;
+                }
+                @include s-breakpoint {
+                    font-size: 20px;
+                }
+            }
+        }
+        .arrows {
+            display: flex;
+            gap: 35px;
+            @include s-breakpoint {
+                display: none;
+            }
+            .vector1{
+                width: 75px;
+                height: 75px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                .first-vector {
+                    width: 32px;
+                    height: 28px;
+                    
+                    
+                }
+            }    
+            .vector2{
+                width: 75px;
+                height: 75px;
+                background-image: linear-gradient(30deg, rgba(100, 123, 100, 1),rgba(102, 172, 102, 1));
+                border-radius: 75px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+                .second-vector {
+                    width: 32px;
+                    height: 28px;
+                
+                }
+            }
+        }
+    }
+    .options {
+        display: flex;
+        gap: 40px;
+        @include l-breakpoint {
+            overflow: hidden;
+        }
+        .first-option {
+            display: flex;
+            flex-direction: column;
+            gap: 24px;
+            background-image: linear-gradient( rgba(100, 123, 100, 0),rgba(100, 123, 100, 0.07));
+            padding: 32px 32px 32px 40px;
+            border-radius: 8px;
+           
+            .option-image{
+                display: flex;
+                img {
+                    height: 268px;
+                    width: 159px;
+                    @include s-breakpoint {
+                        width: 103px;
+                        height: 173px;
+                    }
+                }
+                .image-description{
+                    h4{
+                        font-size: 16px;
+                        @include s-breakpoint {
+                            font-size: 12px;
+                        }
+                    }
+                    span {
+                        font-size: 13px;
+                        @include s-breakpoint {
+                            font-size: 10px;
+                        }
+                    }
+                }
+            }
+            .option-description {
+                font-size: 16px;
+                @include s-breakpoint {
+                    font-size: 12px;
+                }
+            }
+
+        }
+        .second-option {
+            display: flex;
+            flex-direction: column;
+            gap: 24px;
+            background-image: linear-gradient( rgba(100, 123, 100, 0),rgba(100, 123, 100, 0.07));
+            padding: 32px 32px 32px 40px;
+            border-radius: 8px;
+           
+            .option-image{
+                display: flex;
+                img {
+                    height: 268px;
+                    width: 159px;
+                    @include s-breakpoint {
+                        width: 103px;
+                        height: 173px;
+                    }
+                }
+                .image-description{
+                    h4{
+                        font-size: 16px;
+                        @include s-breakpoint {
+                            font-size: 12px;
+                        }
+                    }
+                    span {
+                        font-size: 13px;
+                        @include s-breakpoint {
+                            font-size: 10px;
+                        }
+                    }
+                }
+            }
+            .option-description {
+                font-size: 16px;
+                @include s-breakpoint{
+                    font-size: 12px;
+                }
+            }
+        }
+        .third-option {
+            display: flex;
+            flex-direction: column;
+            gap: 24px;
+            background-image: linear-gradient( rgba(100, 123, 100, 0),rgba(100, 123, 100, 0.07));
+            padding: 32px 32px 32px 40px;
+            border-radius: 8px;
+            @include xl-breakpoint{
+                overflow: hidden;
+            }
+            @include s-breakpoint {
+                overflow: visible;
+            }
+            
+            .option-image{
+                display: flex;
+                img {
+                    height: 268px;
+                    width: 159px;
+                    @include s-breakpoint {
+                        width: 103px;
+                        height: 173px;
+                    }
+                }
+                .image-description{
+                    h4{
+                        font-size: 16px;
+                        @include s-breakpoint {
+                            font-size: 12px;
+                        }
+                    }
+                    span {
+                        font-size: 13px;
+                        @include s-breakpoint {
+                            font-size: 10px;
+                        }
+                    }
+                }
+            }
+            .option-description {
+                font-size: 16px;
+                @include s-breakpoint {
+                    font-size: 12px;
+                }
+            }
+        }
+    }
+}
